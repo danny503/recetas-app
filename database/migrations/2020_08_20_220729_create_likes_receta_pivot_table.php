@@ -15,8 +15,8 @@ class CreateLikesRecetaPivotTable extends Migration
     {
         Schema::create('likes_receta_pivot', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->references('id')->on('users'); 
-            $table->foreignId('receta_id')->constrained();
+            $table->foreignId('user_id'); 
+            $table->foreignId('receta_id');
             $table->timestamps();
         });
     }

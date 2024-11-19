@@ -19,8 +19,8 @@ class CreateRecetasTable extends Migration
             $table->text('ingredientes');
             $table->text('preparacion');
             $table->string('imagen');
-            $table->foreignId('user_id')->references('user_id')->on('users')->comment('El usuario que crea la receta');
-            $table->foreignId('categoria_id')->references('categoria_id')->on('categorias');
+            $table->foreignId('user_id')->comment('El usuario que crea la receta')->nullable();
+            $table->foreignId('categoria_id')->nullable();
             $table->timestamps();
         });
     }
